@@ -11987,4 +11987,11 @@ h1, .h1 {
 
 p, div {
   font-family: "Raleway", sans-serif;
+}
+
+.navbar-brand {
+  background-image: url(../images/logo.png);
+  width: 160px;
+  height: 160px;
+  position: absolute;
 }/*# sourceMappingURL=main.css.map */
