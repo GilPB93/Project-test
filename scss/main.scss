@@ -1,27 +1,54 @@
 @import 'custom';
 
-html {
+html{
     position: relative;
     min-height: 100%;
 
 }
 
-main {
+main{
     margin-bottom: 272px;
 }
 
-footer.footer {
+footer.footer{
     padding: 15px;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-h1 {
+h1{
     font-family: 'Rubik Dirt', sans-serif;
 }
 
-p, div {
+p, div{
     font-family: 'Raleway', sans-serif;
 }
 
+.hero-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image: url(../images/girafe1.jpg);
+        background-size: cover;
+    }
+
+    *{
+        //Positionner les éléments devant le ::before
+        position:relative;
+    }
+
+    .hero-scene-content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+ 
