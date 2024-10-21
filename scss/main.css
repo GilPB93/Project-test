@@ -11970,6 +11970,29 @@ html {
   min-height: 100%;
 }
 
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: #384C73; /* Couleur de fond du header */
+  position: relative; /* Nécessaire pour que le logo soit positionné par rapport au header */
+  text-align: center;
+  color: white;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 main {
   margin-bottom: 272px;
 }
