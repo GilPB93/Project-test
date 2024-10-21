@@ -6,17 +6,51 @@
 </div>
 
 <div class="container"> <!-- container afin de donner des marges latérales dynamiques -->
+    <div class="text-center">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une image</button> <!--ajout du bouton d'ajout de contenu + type + data-bs-toggle qui ouvre une fenetre + data-bs-target qui est la cible à ouvrir-->
+    </div>
     <div class="row row-cols-lg-2"> <!-- row-cols-lg-3 pour la partie responsive desktop -->
         <div class="col p-3"> <!-- p-3 pour margin top space -->
             <div class="image-card text-white">
-                            <img src="../images/food.jpg" class="rounded w-100"/>
-                            <p class="titre-image"/>Titre</div>
+                <img src="../images/food.jpg" class="rounded w-100" alt="Titre"/>
+                <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button> <!-- bouton de edition de contenu / récupéré dans la documentation Bootstrap Icon-->
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button> <!-- bouton de suppression de contenu / récupéré dans la documentation Bootstrap Icon-->
+                </div> 
             </div>
         </div>
     <!-- Ajouter d’autres images -->
-        
     </div>
 </div>
-    
+
+
+<!-- Modal edition -->
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true"> <!--modal fade=foncer la pager ouverte / arias=options malvoyants--> <!--bien penser à faire le changement de id et de aria-labelledby-->
+    <div class="modal-dialog"> <!--ouverture du pop-in-->
+      <div class="modal-content">
+        <div class="modal-header"> <!--header du modale-->
+          <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition Photo</h2> <!--changer id-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> <!--body du modale-->
+            <form>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Titre</label> <!--changer for et id-->
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="Lasagnes à la bolognese" name="Titre"> 
+                </div>
+                <div class="mb-3">
+                  <label for="ImageInput" class="form-label">Image</label> <!--changer for et id-->
+                  <input type="file" class="form-control" id="ImageInput"  name="Image"> <!--image=file donc le type sera pas text mais file-->
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer"> <!--footer du modale-->
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary text-center">Enregistrer</button>
+          </div>
+      </div>
+    </div>
+  </div>
 
 

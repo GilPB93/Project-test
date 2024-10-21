@@ -79,3 +79,28 @@ p, div{
     text-align: justify;
 }
 
+
+
+.image-card{ //parametres des images dans la galerie
+    position:relative;
+    &:hover{ //action de survol
+        .titre-image,
+        .action-image-buttons{
+            opacity: 1;
+        }
+    }
+
+
+    .action-image-buttons{ //positionement des boutons de edition et suppression - pour parametrer à souhait je peux le faire directement sur google en sélectionnant l'objet en question
+        position : absolute; //position absolue afin que l'icon passe par dessus l'image
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex; //disposition obligatoire pour disposer les icons aux extremités de l'image
+        justify-content: space-between; //espacement entre les deux icons
+
+        opacity: 0;
+        transition: all 0.3s;
+    }
+}
