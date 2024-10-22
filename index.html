@@ -84,14 +84,21 @@
                         <a class="nav-link" href="/">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Contact</a>
-                    </li>           
+                        <a class="nav-link" href="/signin">Contact</a>
+                    </li>
+                    <li class="nav-item" data-show="disconnected">
+                      <button class="nav-link">Connexion</button>
+                    </li>  
+                    <li class="nav-item" data-show="connected">
+                      <button class="nav-link" id="signout-btn">Déconnexion</button>
+                    </li>            
                   </ul>
             </div>
             
         </div>
     </footer>
 
+    <script src="/js/script/script.js"></script>
     <script type="module" src="Router/Router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
